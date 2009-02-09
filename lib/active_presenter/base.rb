@@ -135,11 +135,11 @@ module ActivePresenter
     end
     
     def self.create(attrs={})
-      new(attrs={}).save
+      new(attrs).save
     end
     
     def self.create!(attrs={})
-      new(attrs={}).save!
+      new(attrs).save!
     end
     
     # Update attributes, and save the presentables
