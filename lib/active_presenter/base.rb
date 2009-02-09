@@ -52,7 +52,7 @@ module ActivePresenter
       args ||= {}
       
       presented.each do |type, klass|
-        send("#{type}=", args[type].is_a?(klass) ? args.delete(type) : klass.new)
+        send("#{type}=", args[type].is_a?(klass) ? args.delete(type) : klass.new(args.delete(type)))
       end
       
       self.attributes = args
