@@ -134,6 +134,14 @@ module ActivePresenter
       true
     end
     
+    def self.create(attrs={})
+      new(attrs={}).save
+    end
+    
+    def self.create!(attrs={})
+      new(attrs={}).save
+    end
+    
     # Update attributes, and save the presentables
     #
     # Returns true or false based on success.
